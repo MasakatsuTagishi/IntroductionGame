@@ -181,8 +181,8 @@
 				0780BF632845E00200128925 /* Frameworks */,
 				0780BF642845E00200128925 /* Resources */,
 				07A95A962845E193007EF05D /* Run SwiftLint */,
-				13E0124E170F1648735AAE54 /* [CP] Embed Pods Frameworks */,
 				07A95A972845E4BB007EF05D /* Run R.swift */,
+				13E0124E170F1648735AAE54 /* [CP] Embed Pods Frameworks */,
 				0780BF622845E00200128925 /* Sources */,
 			);
 			buildRules = (
