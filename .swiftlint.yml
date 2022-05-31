@@ -1,0 +1,27 @@
+disabled_rules:
+- notification_center_detachment
+- force_cast
+- force_try
+- todo
+- trailing_whitespace
+- type_body_length
+- file_length
+excluded:
+- Pods
+- R.generated.swift
+line_length:
+ warning: 300
+ error: 400
+ ignores_comments: true
+function_body_length:
+- 150 # warning
+- 300 # error
+identifier_name:
+ min_length: 1
+ max_length: 70
+type_name:
+ min_length: 1
+ max_length: 50
+nesting:
+ type_level: 3
+function_parameter_count: 7
