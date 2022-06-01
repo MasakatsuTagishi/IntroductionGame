@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0780BF6A2845E00200128925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF692845E00200128925 /* AppDelegate.swift */; };
 		0780BF6C2845E00200128925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6B2845E00200128925 /* SceneDelegate.swift */; };
-		0780BF6E2845E00200128925 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6D2845E00200128925 /* ViewController.swift */; };
+		0780BF6E2845E00200128925 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6D2845E00200128925 /* HomeScreenViewController.swift */; };
 		0780BF712845E00200128925 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0780BF6F2845E00200128925 /* Main.storyboard */; };
 		0780BF732845E00300128925 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0780BF722845E00300128925 /* Assets.xcassets */; };
 		0780BF762845E00300128925 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0780BF742845E00300128925 /* LaunchScreen.storyboard */; };
@@ -17,6 +17,11 @@
 		0780BF8B2845E00300128925 /* IntroductionGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF8A2845E00300128925 /* IntroductionGameUITests.swift */; };
 		0780BF8D2845E00300128925 /* IntroductionGameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF8C2845E00300128925 /* IntroductionGameUITestsLaunchTests.swift */; };
 		07A95A992845E605007EF05D /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A95A982845E605007EF05D /* R.generated.swift */; };
+		07A95AA92845FD5F007EF05D /* HomeScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A95AA82845FD5F007EF05D /* HomeScreenView.xib */; };
+		07A95AAC2845FF3F007EF05D /* IntroductionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */; };
+		07A95AAD2845FF3F007EF05D /* IntroductionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A95AAB2845FF3F007EF05D /* IntroductionViewController.xib */; };
+		07A95AB02845FF60007EF05D /* DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */; };
+		07A95AB12845FF60007EF05D /* DescriptionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */; };
 		384D2A1D2AAC6EEB02141A95 /* Pods_IntroductionGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C6E52DFD3313BD5DD29C62 /* Pods_IntroductionGame.framework */; };
 		7CF3F873CEFF30CE4AAA77CC /* Pods_IntroductionGameTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7489B2F78F494275E62CCD0E /* Pods_IntroductionGameTests.framework */; };
 		D251D0411B4E52EE41229491 /* Pods_IntroductionGame_IntroductionGameUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 792AD8F6E88BD0077359C67E /* Pods_IntroductionGame_IntroductionGameUITests.framework */; };
@@ -43,7 +48,7 @@
 		0780BF662845E00200128925 /* IntroductionGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroductionGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0780BF692845E00200128925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0780BF6B2845E00200128925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0780BF6D2845E00200128925 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0780BF6D2845E00200128925 /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		0780BF702845E00200128925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0780BF722845E00300128925 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0780BF752845E00300128925 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,6 +59,11 @@
 		0780BF8A2845E00300128925 /* IntroductionGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionGameUITests.swift; sourceTree = "<group>"; };
 		0780BF8C2845E00300128925 /* IntroductionGameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionGameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		07A95A982845E605007EF05D /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
+		07A95AA82845FD5F007EF05D /* HomeScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeScreenView.xib; sourceTree = "<group>"; };
+		07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewController.swift; sourceTree = "<group>"; };
+		07A95AAB2845FF3F007EF05D /* IntroductionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IntroductionViewController.xib; sourceTree = "<group>"; };
+		07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionViewController.swift; sourceTree = "<group>"; };
+		07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescriptionViewController.xib; sourceTree = "<group>"; };
 		41C4EF478B190B1484A58F66 /* Pods-IntroductionGameTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroductionGameTests.debug.xcconfig"; path = "Target Support Files/Pods-IntroductionGameTests/Pods-IntroductionGameTests.debug.xcconfig"; sourceTree = "<group>"; };
 		57DD035D556573F7444243F2 /* Pods-IntroductionGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IntroductionGame.release.xcconfig"; path = "Target Support Files/Pods-IntroductionGame/Pods-IntroductionGame.release.xcconfig"; sourceTree = "<group>"; };
 		7489B2F78F494275E62CCD0E /* Pods_IntroductionGameTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IntroductionGameTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +131,12 @@
 			children = (
 				0780BF692845E00200128925 /* AppDelegate.swift */,
 				0780BF6B2845E00200128925 /* SceneDelegate.swift */,
-				0780BF6D2845E00200128925 /* ViewController.swift */,
+				0780BF6D2845E00200128925 /* HomeScreenViewController.swift */,
+				07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */,
+				07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */,
+				07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */,
+				07A95AAB2845FF3F007EF05D /* IntroductionViewController.xib */,
+				07A95AA82845FD5F007EF05D /* HomeScreenView.xib */,
 				0780BF6F2845E00200128925 /* Main.storyboard */,
 				0780BF722845E00300128925 /* Assets.xcassets */,
 				0780BF742845E00300128925 /* LaunchScreen.storyboard */,
@@ -178,10 +193,10 @@
 			buildConfigurationList = 0780BF902845E00300128925 /* Build configuration list for PBXNativeTarget "IntroductionGame" */;
 			buildPhases = (
 				A57DCB2247580FBD9D7AAEDF /* [CP] Check Pods Manifest.lock */,
+				07A95A972845E4BB007EF05D /* Run R.swift */,
 				0780BF632845E00200128925 /* Frameworks */,
 				0780BF642845E00200128925 /* Resources */,
 				07A95A962845E193007EF05D /* Run SwiftLint */,
-				07A95A972845E4BB007EF05D /* Run R.swift */,
 				13E0124E170F1648735AAE54 /* [CP] Embed Pods Frameworks */,
 				0780BF622845E00200128925 /* Sources */,
 			);
@@ -281,9 +296,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A95AAD2845FF3F007EF05D /* IntroductionViewController.xib in Resources */,
 				0780BF762845E00300128925 /* LaunchScreen.storyboard in Resources */,
 				0780BF732845E00300128925 /* Assets.xcassets in Resources */,
+				07A95AB12845FF60007EF05D /* DescriptionViewController.xib in Resources */,
 				0780BF712845E00200128925 /* Main.storyboard in Resources */,
+				07A95AA92845FD5F007EF05D /* HomeScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,8 +467,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0780BF6E2845E00200128925 /* ViewController.swift in Sources */,
+				0780BF6E2845E00200128925 /* HomeScreenViewController.swift in Sources */,
+				07A95AAC2845FF3F007EF05D /* IntroductionViewController.swift in Sources */,
 				0780BF6A2845E00200128925 /* AppDelegate.swift in Sources */,
+				07A95AB02845FF60007EF05D /* DescriptionViewController.swift in Sources */,
 				0780BF6C2845E00200128925 /* SceneDelegate.swift in Sources */,
 				07A95A992845E605007EF05D /* R.generated.swift in Sources */,
 			);
