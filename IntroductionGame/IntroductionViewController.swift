@@ -9,24 +9,28 @@ import UIKit
 
 class IntroductionViewController: UIViewController {
 
+    @IBOutlet private weak var questionView: UIView! {
+        didSet {
+            questionView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+            questionView.layer.shadowColor = UIColor.gray.cgColor
+            questionView.layer.shadowOpacity = 1.0
+            questionView.layer.shadowRadius = 8
+            questionView.layer.cornerRadius = 5
+        }
+    }
+
+    @IBOutlet private weak var gameButton: UIButton!
+
     override func loadView() {
         view = R.nib.introductionViewController(owner: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    /*
-    // MARK: - Navigation
+    @IBAction func pressedGameButton(_ sender: Any) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
 
 }
