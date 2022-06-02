@@ -14,43 +14,67 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ax-Jg-k2u">
-                    <rect key="frame" x="186" y="437.5" width="42" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Self Introduction" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPc-ow-W8E">
+                    <rect key="frame" x="20" y="244" width="374" height="34"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5UF-yt-ocB">
-                    <rect key="frame" x="174" y="522" width="67" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="楽しくできる自己紹介" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t39-pu-gPh">
+                    <rect key="frame" x="20" y="303" width="374" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1af-aI-Cdc">
+                    <rect key="frame" x="20" y="730" width="374" height="31"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="はじめる">
+                        <backgroundConfiguration key="background" cornerRadius="8">
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
-                        <action selector="toIntroductionVCButton:" destination="-1" eventType="touchUpInside" id="y42-VV-brw"/>
+                        <action selector="toIntroductionVCButton:" destination="-1" eventType="touchUpInside" id="7Gk-L2-cpZ"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nzx-Uj-OFZ">
-                    <rect key="frame" x="174" y="577" width="67" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJG-2X-TcG">
+                    <rect key="frame" x="20" y="781" width="374" height="31"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="説明">
+                        <backgroundConfiguration key="background" cornerRadius="8">
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </backgroundConfiguration>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
                     <connections>
-                        <action selector="toDescriptionVCButton:" destination="-1" eventType="touchUpInside" id="8Q3-gv-mUW"/>
+                        <action selector="toDescriptionVCButton:" destination="-1" eventType="touchUpInside" id="OkC-3S-J1s"/>
                     </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
-                <constraint firstItem="2ax-Jg-k2u" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="TPc-Va-Qqu"/>
-                <constraint firstItem="2ax-Jg-k2u" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="bRV-4w-Dai"/>
+                <constraint firstItem="1af-aI-Cdc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="2nG-pG-tJN"/>
+                <constraint firstItem="oPc-ow-W8E" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="4b7-qe-wbf"/>
+                <constraint firstItem="t39-pu-gPh" firstAttribute="top" secondItem="oPc-ow-W8E" secondAttribute="bottom" constant="25" id="Hz5-5p-ZZe"/>
+                <constraint firstItem="mJG-2X-TcG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="ayA-vN-Yss"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="t39-pu-gPh" secondAttribute="trailing" constant="20" id="fWF-aT-pQW"/>
+                <constraint firstItem="t39-pu-gPh" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="g1g-Cm-GKU"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="mJG-2X-TcG" secondAttribute="bottom" constant="50" id="gFD-j4-xla"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1af-aI-Cdc" secondAttribute="trailing" constant="20" id="iVa-VE-nkN"/>
+                <constraint firstItem="mJG-2X-TcG" firstAttribute="top" secondItem="1af-aI-Cdc" secondAttribute="bottom" constant="20" id="ivS-FE-Za1" userLabel="説明.top = はじめる.bottom + 20"/>
+                <constraint firstItem="oPc-ow-W8E" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="200" id="jr7-kh-wHO"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="oPc-ow-W8E" secondAttribute="trailing" constant="20" id="lj6-Wm-JpB"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="mJG-2X-TcG" secondAttribute="trailing" constant="20" id="sHZ-CZ-c1G"/>
             </constraints>
-            <point key="canvasLocation" x="139" y="120"/>
+            <point key="canvasLocation" x="137.68115942028987" y="119.86607142857142"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
