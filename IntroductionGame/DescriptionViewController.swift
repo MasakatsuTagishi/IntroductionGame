@@ -61,6 +61,10 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBAction private func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+
 }
 
 // MARK: UIScrollViewDelegate
