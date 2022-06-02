@@ -13,10 +13,6 @@ class HomeScreenViewController: UIViewController {
         view = R.nib.homeScreenView(owner: self)
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     @IBAction func toIntroductionVCButton(_ sender: Any) {
         self.performSegue(withIdentifier: R.segue.homeScreenViewController.toIntroductionVC, sender: nil)
     }
