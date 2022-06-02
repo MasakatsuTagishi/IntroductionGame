@@ -11,7 +11,7 @@
                 <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController">
                     <connections>
                         <segue destination="H3q-Y9-9hy" kind="show" identifier="toIntroductionVC" id="QRj-GD-jgj"/>
-                        <segue destination="vpL-yr-Njw" kind="presentation" identifier="toDescriptionVC" id="rkv-pj-Y4n"/>
+                        <segue destination="vpL-yr-Njw" kind="presentation" identifier="toDescriptionVC" modalPresentationStyle="fullScreen" id="rkv-pj-Y4n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
