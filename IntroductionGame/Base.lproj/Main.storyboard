@@ -21,12 +21,24 @@
         <!--Introduction View Controller-->
         <scene sceneID="MAO-g2-mS8">
             <objects>
-                <viewController id="H3q-Y9-9hy" customClass="IntroductionViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="vax-Zu-BAL"/>
+                <viewController modalPresentationStyle="fullScreen" id="H3q-Y9-9hy" customClass="IntroductionViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <connections>
+                        <segue destination="czm-le-nGg" kind="show" identifier="toAdditionGameTextVC" id="1hc-sd-n7T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fB8-8e-cRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="894" y="104"/>
+        </scene>
+        <!--Addition Game Text View Controller-->
+        <scene sceneID="MWP-XV-Qse">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="czm-le-nGg" customClass="AdditionGameTextViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pFR-Kg-xeE"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4V-sh-Qts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1858" y="104"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="J0R-fW-Gp9">
