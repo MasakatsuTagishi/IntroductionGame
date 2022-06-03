@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R45-Gq-LEH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Home Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeScreenViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="UDs-je-Snf"/>
                     <connections>
-                        <segue destination="H3q-Y9-9hy" kind="show" identifier="toIntroductionVC" id="QRj-GD-jgj"/>
                         <segue destination="vpL-yr-Njw" kind="presentation" identifier="toDescriptionVC" modalPresentationStyle="fullScreen" id="rkv-pj-Y4n"/>
+                        <segue destination="H3q-Y9-9hy" kind="push" identifier="toIntroductionVC" id="8ro-Xq-Qxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="104"/>
+            <point key="canvasLocation" x="821.73913043478262" y="103.79464285714285"/>
         </scene>
         <!--Introduction View Controller-->
         <scene sceneID="MAO-g2-mS8">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="H3q-Y9-9hy" customClass="IntroductionViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7Vx-MS-Z9a"/>
                     <connections>
-                        <segue destination="czm-le-nGg" kind="show" identifier="toAdditionGameTextVC" id="1hc-sd-n7T"/>
+                        <segue destination="czm-le-nGg" kind="push" identifier="toAdditionGameTextVC" id="3KE-eZ-uxY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fB8-8e-cRZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="894" y="104"/>
+            <point key="canvasLocation" x="1802.8985507246377" y="103.79464285714285"/>
         </scene>
         <!--Addition Game Text View Controller-->
         <scene sceneID="MWP-XV-Qse">
@@ -38,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4V-sh-Qts" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1858" y="104"/>
+            <point key="canvasLocation" x="2768.1159420289855" y="103.79464285714285"/>
         </scene>
         <!--Description View Controller-->
         <scene sceneID="J0R-fW-Gp9">
@@ -46,7 +49,25 @@
                 <viewController id="vpL-yr-Njw" customClass="DescriptionViewController" customModule="IntroductionGame" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sHE-9H-4Cf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-88" y="830"/>
+            <point key="canvasLocation" x="822" y="879"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="z7D-Qo-R3e">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="R45-Gq-LEH" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="II1-sQ-blQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TDP-5Q-5oA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="awI-bh-p2p" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-88.405797101449281" y="103.79464285714285"/>
         </scene>
     </scenes>
 </document>

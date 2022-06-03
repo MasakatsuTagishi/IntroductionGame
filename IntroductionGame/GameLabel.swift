@@ -9,7 +9,7 @@ import Foundation
 
 class GameLabel {
 
-    let startGameLabel: String = "スタートボタンを押してください"
+    let startGameLabel: String = "スタートボタンを\n押してください"
 
     static var gameLabel: [String] = [
         "好きな食べ物は何ですか",

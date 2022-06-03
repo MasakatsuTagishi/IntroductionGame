@@ -26,6 +26,7 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
         tableView.dataSource = self
         tableView.register(UINib(nibName: fileName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView.layer.cornerRadius = 8
+        self.navigationItem.hidesBackButton = true
     }
 
     @IBAction func additionButton(_ sender: Any) {
@@ -34,7 +35,7 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
     }
 
     @IBAction func dismissButton(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
