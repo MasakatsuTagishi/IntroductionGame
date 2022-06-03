@@ -18,7 +18,12 @@ class GameLabel {
     ]
 
     func randomLabel() -> String {
-        let label = GameLabel.gameLabel.randomElement() ?? "ボタンを押してください"
+        let label = GameLabel.gameLabel.randomElement() ?? "スタートボタンを押してください"
+        return label
+    }
+
+    func resetLabel() -> String {
+        let label = startGameLabel
         return label
     }
 
