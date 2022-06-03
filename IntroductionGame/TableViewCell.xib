@@ -25,17 +25,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-FS-TrA">
-                        <rect key="frame" x="42" y="12" width="262" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-FS-TrA">
+                        <rect key="frame" x="42" y="12" width="262" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="fZN-i4-40E"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="5Y7-FS-TrA" secondAttribute="bottom" constant="11" id="BQh-v9-z5v"/>
+                    <constraint firstItem="5Y7-FS-TrA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Has-c2-GUS"/>
                     <constraint firstItem="ek1-0O-Bjz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="L67-0r-QHz"/>
-                    <constraint firstItem="5Y7-FS-TrA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="Np6-aI-YhH"/>
                     <constraint firstItem="5Y7-FS-TrA" firstAttribute="leading" secondItem="ek1-0O-Bjz" secondAttribute="trailing" constant="8" symbolic="YES" id="TC1-fw-xmA"/>
                     <constraint firstItem="ek1-0O-Bjz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="YbM-2D-hlY"/>
                     <constraint firstAttribute="trailing" secondItem="5Y7-FS-TrA" secondAttribute="trailing" constant="16" id="eAv-Pp-Loh"/>

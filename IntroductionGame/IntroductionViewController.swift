@@ -14,11 +14,11 @@ class IntroductionViewController: UIViewController {
 
     @IBOutlet private weak var questionView: UIView! {
         didSet {
-            questionView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+            questionView.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
             questionView.layer.shadowColor = UIColor.gray.cgColor
-            questionView.layer.shadowOpacity = 1.0
-            questionView.layer.shadowRadius = 8
-            questionView.layer.cornerRadius = 5
+            questionView.layer.shadowOpacity = 0.6
+            questionView.layer.shadowRadius = 20
+            questionView.layer.cornerRadius = 10
         }
     }
 
@@ -34,6 +34,7 @@ class IntroductionViewController: UIViewController {
         super.viewDidLoad()
         setupGameLabel()
         setupButtonLabel()
+        self.navigationItem.hidesBackButton = true
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +43,7 @@ class IntroductionViewController: UIViewController {
     }
 
     @IBAction private func dismissButton(_ sender: Any) {
-        self.dismiss(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 
     @IBAction private func pressedGameButton(_ sender: Any) {
