@@ -9,6 +9,8 @@ import UIKit
 
 class IntroductionViewController: UIViewController {
 
+    private let gameButton = GameButton()
+
     @IBOutlet private weak var questionView: UIView! {
         didSet {
             questionView.layer.shadowOffset = CGSize(width: 2.0, height: 2.0)
@@ -19,7 +21,7 @@ class IntroductionViewController: UIViewController {
         }
     }
 
-    @IBOutlet private weak var gameButton: UIButton!
+    @IBOutlet private weak var button: UIButton!
 
     override func loadView() {
         view = R.nib.introductionViewController(owner: self)
@@ -27,10 +29,23 @@ class IntroductionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameButton.delegate = self
+        setupButtonLabel()
     }
 
     @IBAction func pressedGameButton(_ sender: Any) {
+        gameButton.changeText()
+    }
 
+    func setupButtonLabel() {
+        button.setTitle(gameButton.text.rawValue, for: .normal)
+    }
+
+}
+
+extension IntroductionViewController: ChangeTextDelegate {
+    func didchangeText() {
+        setupButtonLabel()
     }
 
 }
