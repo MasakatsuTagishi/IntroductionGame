@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07428AD12849869500E86A04 /* GameButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07428AD02849869500E86A04 /* GameButton.swift */; };
+		07428AD12849869500E86A04 /* GameButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07428AD02849869500E86A04 /* GameButtonText.swift */; };
+		07428AD32849A04800E86A04 /* GameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07428AD22849A04800E86A04 /* GameLabel.swift */; };
 		0780BF6A2845E00200128925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF692845E00200128925 /* AppDelegate.swift */; };
 		0780BF6C2845E00200128925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6B2845E00200128925 /* SceneDelegate.swift */; };
 		0780BF6E2845E00200128925 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6D2845E00200128925 /* HomeScreenViewController.swift */; };
@@ -46,7 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07428AD02849869500E86A04 /* GameButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButton.swift; sourceTree = "<group>"; };
+		07428AD02849869500E86A04 /* GameButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButtonText.swift; sourceTree = "<group>"; };
+		07428AD22849A04800E86A04 /* GameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLabel.swift; sourceTree = "<group>"; };
 		0780BF662845E00200128925 /* IntroductionGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroductionGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0780BF692845E00200128925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0780BF6B2845E00200128925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -134,7 +136,8 @@
 				0780BF692845E00200128925 /* AppDelegate.swift */,
 				0780BF6B2845E00200128925 /* SceneDelegate.swift */,
 				0780BF6D2845E00200128925 /* HomeScreenViewController.swift */,
-				07428AD02849869500E86A04 /* GameButton.swift */,
+				07428AD02849869500E86A04 /* GameButtonText.swift */,
+				07428AD22849A04800E86A04 /* GameLabel.swift */,
 				07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */,
 				07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */,
 				07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */,
@@ -470,10 +473,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07428AD12849869500E86A04 /* GameButton.swift in Sources */,
+				07428AD12849869500E86A04 /* GameButtonText.swift in Sources */,
 				0780BF6E2845E00200128925 /* HomeScreenViewController.swift in Sources */,
 				07A95AAC2845FF3F007EF05D /* IntroductionViewController.swift in Sources */,
 				0780BF6A2845E00200128925 /* AppDelegate.swift in Sources */,
+				07428AD32849A04800E86A04 /* GameLabel.swift in Sources */,
 				07A95AB02845FF60007EF05D /* DescriptionViewController.swift in Sources */,
 				0780BF6C2845E00200128925 /* SceneDelegate.swift in Sources */,
 				07A95A992845E605007EF05D /* R.generated.swift in Sources */,

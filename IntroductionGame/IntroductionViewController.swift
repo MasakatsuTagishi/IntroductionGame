@@ -9,7 +9,8 @@ import UIKit
 
 class IntroductionViewController: UIViewController {
 
-    private let gameButton = GameButton()
+    private let gameButton = GameButtonText()
+    private let gameLabel = GameLabel()
 
     @IBOutlet private weak var questionView: UIView! {
         didSet {
@@ -21,6 +22,8 @@ class IntroductionViewController: UIViewController {
         }
     }
 
+    @IBOutlet private weak var gameView: UIView!
+    @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var button: UIButton!
 
     override func loadView() {
@@ -29,23 +32,34 @@ class IntroductionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        gameButton.delegate = self
+        setupGameLabel()
         setupButtonLabel()
     }
 
     @IBAction func pressedGameButton(_ sender: Any) {
-        gameButton.changeText()
+        changeButtonLabel()
+        changeGameLabel()
+        viewAnimation()
+    }
+
+    func viewAnimation() {
+        UIView.transition(with: gameView, duration: 1.0, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
+    }
+
+    func changeButtonLabel() {
+        button.setTitle(gameButton.changeText(), for: .normal)
+    }
+
+    func changeGameLabel() {
+        label.text = gameLabel.randomLabel()
     }
 
     func setupButtonLabel() {
         button.setTitle(gameButton.text.rawValue, for: .normal)
     }
 
-}
-
-extension IntroductionViewController: ChangeTextDelegate {
-    func didchangeText() {
-        setupButtonLabel()
+    func setupGameLabel() {
+        label.text = gameLabel.startGameLabel
     }
 
 }
