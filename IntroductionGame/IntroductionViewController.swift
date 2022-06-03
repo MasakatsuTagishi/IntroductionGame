@@ -36,29 +36,50 @@ class IntroductionViewController: UIViewController {
         setupButtonLabel()
     }
 
-    @IBAction func pressedGameButton(_ sender: Any) {
+    override func viewWillAppear(_ animated: Bool) {
+        resetButtonLabel()
+        resetGameLabel()
+    }
+
+    @IBAction private func dismissButton(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+
+    @IBAction private func pressedGameButton(_ sender: Any) {
         changeButtonLabel()
         changeGameLabel()
         viewAnimation()
     }
 
-    func viewAnimation() {
+    @IBAction func toAdditionGameTextVCButton(_ sender: Any) {
+        self.performSegue(withIdentifier: R.segue.introductionViewController.toAdditionGameTextVC, sender: nil)
+    }
+
+    private func viewAnimation() {
         UIView.transition(with: gameView, duration: 1.0, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
     }
 
-    func changeButtonLabel() {
+    private func changeButtonLabel() {
         button.setTitle(gameButton.changeText(), for: .normal)
     }
 
-    func changeGameLabel() {
+    private func changeGameLabel() {
         label.text = gameLabel.randomLabel()
     }
 
-    func setupButtonLabel() {
+    private func resetGameLabel() {
+        label.text = gameLabel.resetLabel()
+    }
+
+    private func setupButtonLabel() {
         button.setTitle(gameButton.text.rawValue, for: .normal)
     }
 
-    func setupGameLabel() {
+    private func resetButtonLabel() {
+        button.setTitle(gameButton.resetText(), for: .normal)
+    }
+
+    private func setupGameLabel() {
         label.text = gameLabel.startGameLabel
     }
 

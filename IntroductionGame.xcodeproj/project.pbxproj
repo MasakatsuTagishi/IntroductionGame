@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0723639C2849DFB800871915 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0723639A2849DFB800871915 /* TableViewCell.swift */; };
+		0723639D2849DFB800871915 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0723639B2849DFB800871915 /* TableViewCell.xib */; };
 		07428AD12849869500E86A04 /* GameButtonText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07428AD02849869500E86A04 /* GameButtonText.swift */; };
 		07428AD32849A04800E86A04 /* GameLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07428AD22849A04800E86A04 /* GameLabel.swift */; };
+		07428AD62849C56600E86A04 /* AdditionGameTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07428AD42849C56600E86A04 /* AdditionGameTextViewController.swift */; };
+		07428AD72849C56600E86A04 /* AdditionGameTextViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07428AD52849C56600E86A04 /* AdditionGameTextViewController.xib */; };
 		0780BF6A2845E00200128925 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF692845E00200128925 /* AppDelegate.swift */; };
 		0780BF6C2845E00200128925 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6B2845E00200128925 /* SceneDelegate.swift */; };
 		0780BF6E2845E00200128925 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0780BF6D2845E00200128925 /* HomeScreenViewController.swift */; };
@@ -47,8 +51,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0723639A2849DFB800871915 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		0723639B2849DFB800871915 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		07428AD02849869500E86A04 /* GameButtonText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameButtonText.swift; sourceTree = "<group>"; };
 		07428AD22849A04800E86A04 /* GameLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameLabel.swift; sourceTree = "<group>"; };
+		07428AD42849C56600E86A04 /* AdditionGameTextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionGameTextViewController.swift; sourceTree = "<group>"; };
+		07428AD52849C56600E86A04 /* AdditionGameTextViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdditionGameTextViewController.xib; sourceTree = "<group>"; };
 		0780BF662845E00200128925 /* IntroductionGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IntroductionGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0780BF692845E00200128925 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0780BF6B2845E00200128925 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +147,10 @@
 				07428AD02849869500E86A04 /* GameButtonText.swift */,
 				07428AD22849A04800E86A04 /* GameLabel.swift */,
 				07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */,
+				07428AD42849C56600E86A04 /* AdditionGameTextViewController.swift */,
+				0723639A2849DFB800871915 /* TableViewCell.swift */,
+				0723639B2849DFB800871915 /* TableViewCell.xib */,
+				07428AD52849C56600E86A04 /* AdditionGameTextViewController.xib */,
 				07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */,
 				07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */,
 				07A95AAB2845FF3F007EF05D /* IntroductionViewController.xib */,
@@ -303,9 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A95AAD2845FF3F007EF05D /* IntroductionViewController.xib in Resources */,
+				07428AD72849C56600E86A04 /* AdditionGameTextViewController.xib in Resources */,
 				0780BF762845E00300128925 /* LaunchScreen.storyboard in Resources */,
 				0780BF732845E00300128925 /* Assets.xcassets in Resources */,
 				07A95AB12845FF60007EF05D /* DescriptionViewController.xib in Resources */,
+				0723639D2849DFB800871915 /* TableViewCell.xib in Resources */,
 				0780BF712845E00200128925 /* Main.storyboard in Resources */,
 				07A95AA92845FD5F007EF05D /* HomeScreenView.xib in Resources */,
 			);
@@ -477,6 +491,8 @@
 				0780BF6E2845E00200128925 /* HomeScreenViewController.swift in Sources */,
 				07A95AAC2845FF3F007EF05D /* IntroductionViewController.swift in Sources */,
 				0780BF6A2845E00200128925 /* AppDelegate.swift in Sources */,
+				07428AD62849C56600E86A04 /* AdditionGameTextViewController.swift in Sources */,
+				0723639C2849DFB800871915 /* TableViewCell.swift in Sources */,
 				07428AD32849A04800E86A04 /* GameLabel.swift in Sources */,
 				07A95AB02845FF60007EF05D /* DescriptionViewController.swift in Sources */,
 				0780BF6C2845E00200128925 /* SceneDelegate.swift in Sources */,

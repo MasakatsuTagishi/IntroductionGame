@@ -13,8 +13,13 @@ class GameButtonText {
 
     func changeText() -> String {
         if text == .play {
-            text = .stop
+            text = .again
         }
+        return text.rawValue
+    }
+
+    func resetText() -> String {
+        text = .play
         return text.rawValue
     }
 
@@ -22,5 +27,5 @@ class GameButtonText {
 
 enum ButtonText: String {
     case play = "スタート"
-    case `stop` = "もう一度"
+    case again = "もう一度"
 }
