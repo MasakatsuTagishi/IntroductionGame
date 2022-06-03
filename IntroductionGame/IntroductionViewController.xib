@@ -11,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroductionViewController" customModule="IntroductionGame" customModuleProvider="target">
             <connections>
                 <outlet property="button" destination="Ad8-14-RvH" id="wAX-ce-sdS"/>
+                <outlet property="gameView" destination="8RR-f8-fMB" id="nyw-RQ-dt8"/>
+                <outlet property="label" destination="K4o-Hy-hbN" id="Y86-qF-VKJ"/>
                 <outlet property="questionView" destination="8RR-f8-fMB" id="W6d-Fw-PiO"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
