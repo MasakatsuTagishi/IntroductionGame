@@ -7,30 +7,30 @@
 
 import UIKit
 
-class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+class AdditionGameTextViewController: UIViewController {
+    // MARK: - Instance
     let gameLabel = GameLabel()
     let alert = Alert()
+
+    // MARK: - Property
     let cellIdentifier = "customCell"
     let fileName = "TableViewCell"
 
+    // MARK: - @IBOutlet
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var tableView: UITableView!
 
+    // MARK: - Lifecycle
     override func loadView() {
         view = R.nib.additionGameTextViewController(owner: self)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        alert.delegate = self
-        tableView.register(UINib(nibName: fileName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-        tableView.layer.cornerRadius = 8
-        self.navigationItem.hidesBackButton = true
+        setup()
     }
 
+    // MARK: - @IBAction
     @IBAction private func additionButton(_ sender: UIButton) {
         let result = Validator.shared.textCheck(text: textField.text, min: 1, max: 30)
         switch result.isValid {
@@ -41,15 +41,43 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
             alert.errorAlert(title: "エラー", message: result.errorMessage) { _ in
                 self.textField.text = ""
             }
-            print(result.errorMessage)
         }
-
     }
 
     @IBAction private func dismissButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 
+    // MARK: - Method
+    func setup() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        alert.delegate = self
+        textField.delegate = self
+        tableView.register(UINib(nibName: fileName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+        tableView.layer.cornerRadius = 8
+        self.navigationItem.hidesBackButton = true
+    }
+
+}
+
+// MARK: - AlertDelegate
+extension AdditionGameTextViewController: AlertDelegate {
+    func present(alert: UIAlertController) {
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension AdditionGameTextViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+// MARK: - UITableViewDelegate, UITableViewDataSource
+extension AdditionGameTextViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         GameLabel.gameLabel.count
     }
@@ -84,11 +112,4 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
 
-}
-
-// MARK: - AlertDelegate
-extension AdditionGameTextViewController: AlertDelegate {
-    func present(alert: UIAlertController) {
-        present(alert, animated: true, completion: nil)
-    }
 }

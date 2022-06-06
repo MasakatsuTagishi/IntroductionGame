@@ -8,11 +8,12 @@
 import UIKit
 
 class HomeScreenViewController: UIViewController {
-
+    // MARK: - Lifecycle
     override func loadView() {
         view = R.nib.homeScreenView(owner: self)
     }
 
+    // MARK: - @IBAction
     @IBAction private func toIntroductionVCButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: R.segue.homeScreenViewController.toIntroductionVC, sender: nil)
     }
