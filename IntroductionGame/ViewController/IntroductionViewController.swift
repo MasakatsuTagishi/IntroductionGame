@@ -8,11 +8,12 @@
 import UIKit
 
 class IntroductionViewController: UIViewController {
-
+    // MARK: - Instance
     private let gameButton = GameButtonText()
     private let gameLabel = GameLabel()
     private let alert = Alert()
-
+    
+    // MARK: - @IBOutlet
     @IBOutlet private weak var questionView: UIView! {
         didSet {
             questionView.layer.shadowOffset = CGSize(width: 10.0, height: 10.0)
@@ -27,6 +28,7 @@ class IntroductionViewController: UIViewController {
     @IBOutlet private weak var label: UILabel!
     @IBOutlet private weak var button: UIButton!
 
+    // MARK: - Lifecycle
     override func loadView() {
         view = R.nib.introductionViewController(owner: self)
     }
@@ -43,7 +45,8 @@ class IntroductionViewController: UIViewController {
         resetButtonLabel()
         resetGameLabel()
     }
-
+    
+    // MARK: - @IBAction
     @IBAction private func dismissButton(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
@@ -59,6 +62,7 @@ class IntroductionViewController: UIViewController {
         self.performSegue(withIdentifier: R.segue.introductionViewController.toAdditionGameTextVC, sender: nil)
     }
 
+    // MARK: - Method
     private func viewAnimation() {
         if !GameLabel.gameLabel.isEmpty {
             UIView.transition(with: gameView, duration: 1.0, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
