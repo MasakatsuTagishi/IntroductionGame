@@ -119,6 +119,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073C8550284DAEA5006A1243 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0780BF6D2845E00200128925 /* HomeScreenViewController.swift */,
+				07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */,
+				07428AD42849C56600E86A04 /* AdditionGameTextViewController.swift */,
+				07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		073C8551284DAEFD006A1243 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				07428AD22849A04800E86A04 /* GameLabel.swift */,
+				07428AD02849869500E86A04 /* GameButtonText.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		073C8553284DAF6C006A1243 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				07A95AA82845FD5F007EF05D /* HomeScreenView.xib */,
+				07A95AAB2845FF3F007EF05D /* IntroductionViewController.xib */,
+				07428AD52849C56600E86A04 /* AdditionGameTextViewController.xib */,
+				07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
 		0780BF5D2845E00200128925 = {
 			isa = PBXGroup;
 			children = (
@@ -147,21 +178,14 @@
 			children = (
 				0780BF692845E00200128925 /* AppDelegate.swift */,
 				0780BF6B2845E00200128925 /* SceneDelegate.swift */,
-				0780BF6D2845E00200128925 /* HomeScreenViewController.swift */,
-				07428AD02849869500E86A04 /* GameButtonText.swift */,
-				07428AD22849A04800E86A04 /* GameLabel.swift */,
-				079B2C2F284B8AD300AF62C4 /* Validator.swift */,
-				07A95AAA2845FF3F007EF05D /* IntroductionViewController.swift */,
-				07428AD42849C56600E86A04 /* AdditionGameTextViewController.swift */,
-				0723639A2849DFB800871915 /* TableViewCell.swift */,
-				079B2C31284D95BA00AF62C4 /* Alert.swift */,
-				0723639B2849DFB800871915 /* TableViewCell.xib */,
-				07428AD52849C56600E86A04 /* AdditionGameTextViewController.xib */,
-				07A95AAE2845FF60007EF05D /* DescriptionViewController.swift */,
-				07A95AAF2845FF60007EF05D /* DescriptionViewController.xib */,
-				07A95AAB2845FF3F007EF05D /* IntroductionViewController.xib */,
-				07A95AA82845FD5F007EF05D /* HomeScreenView.xib */,
+				073C8551284DAEFD006A1243 /* Model */,
+				073C8550284DAEA5006A1243 /* ViewController */,
 				0780BF6F2845E00200128925 /* Main.storyboard */,
+				073C8553284DAF6C006A1243 /* Xib */,
+				0723639A2849DFB800871915 /* TableViewCell.swift */,
+				0723639B2849DFB800871915 /* TableViewCell.xib */,
+				079B2C2F284B8AD300AF62C4 /* Validator.swift */,
+				079B2C31284D95BA00AF62C4 /* Alert.swift */,
 				0780BF722845E00300128925 /* Assets.xcassets */,
 				0780BF742845E00300128925 /* LaunchScreen.storyboard */,
 				0780BF772845E00300128925 /* Info.plist */,

@@ -8,7 +8,7 @@
 import UIKit
 
 class DescriptionViewController: UIViewController {
-
+    // MARK: - @IBOutlet
     @IBOutlet private weak var scrollView: UIScrollView! {
         didSet {
             scrollView.delegate = self
@@ -53,6 +53,7 @@ class DescriptionViewController: UIViewController {
         }
     }
 
+    // MARK: - Lifecycle
     override func loadView() {
         view = R.nib.descriptionViewController(owner: self)
     }
