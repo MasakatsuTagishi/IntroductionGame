@@ -18,8 +18,8 @@ class GameLabel {
     ]
 
     func randomLabel() -> String {
-        let label = GameLabel.gameLabel.randomElement() ?? "＋ボタンを押して質問を追加してください"
-        return label ?? "＋ボタンを押して質問を追加してください"
+        let label = GameLabel.gameLabel.randomElement() ?? ""
+        return label ?? ""
     }
 
     func resetLabel() -> String {
@@ -33,6 +33,12 @@ class GameLabel {
 
     func removeLabel(at index: Int) {
         GameLabel.gameLabel.remove(at: index)
+    }
+
+    func alertDisplay(completion: @escaping () -> Void) {
+        if GameLabel.gameLabel.isEmpty {
+            completion()
+        }
     }
 
 }
