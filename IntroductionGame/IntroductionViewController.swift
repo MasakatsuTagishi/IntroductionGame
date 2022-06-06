@@ -11,6 +11,7 @@ class IntroductionViewController: UIViewController {
 
     private let gameButton = GameButtonText()
     private let gameLabel = GameLabel()
+    private let alert = Alert()
 
     @IBOutlet private weak var questionView: UIView! {
         didSet {
@@ -34,6 +35,7 @@ class IntroductionViewController: UIViewController {
         super.viewDidLoad()
         setupGameLabel()
         setupButtonLabel()
+        alert.delegate = self
         self.navigationItem.hidesBackButton = true
     }
 
@@ -49,6 +51,7 @@ class IntroductionViewController: UIViewController {
     @IBAction private func pressedGameButton(_ sender: UIButton) {
         changeButtonLabel()
         changeGameLabel()
+        alertDisplay()
         viewAnimation()
     }
 
@@ -57,7 +60,9 @@ class IntroductionViewController: UIViewController {
     }
 
     private func viewAnimation() {
-        UIView.transition(with: gameView, duration: 1.0, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
+        if !GameLabel.gameLabel.isEmpty {
+            UIView.transition(with: gameView, duration: 1.0, options: [.transitionFlipFromLeft], animations: nil, completion: nil)
+        }
     }
 
     private func changeButtonLabel() {
@@ -84,4 +89,19 @@ class IntroductionViewController: UIViewController {
         label.text = gameLabel.startGameLabel
     }
 
+    private func alertDisplay() {
+        gameLabel.alertDisplay {
+            self.alert.errorAlert(title: "エラー", message: "質問を入力してください") { [weak self] _ in
+                self?.performSegue(withIdentifier: R.segue.introductionViewController.toAdditionGameTextVC, sender: nil)
+            }
+        }
+    }
+
+}
+
+// MARK: - AlertDelegate
+extension IntroductionViewController: AlertDelegate {
+    func present(alert: UIAlertController) {
+        present(alert, animated: true, completion: nil)
+    }
 }
