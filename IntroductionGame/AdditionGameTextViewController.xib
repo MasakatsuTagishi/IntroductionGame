@@ -51,28 +51,18 @@
                         <action selector="additionButton:" destination="-1" eventType="touchUpInside" id="2xN-hA-a2H"/>
                     </connections>
                 </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="質問リスト" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S1I-pL-Tvq">
-                    <rect key="frame" x="20" y="114" width="374" height="17"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G3H-Cd-rTC">
-                    <rect key="frame" x="20" y="145" width="374" height="717"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="insetGrouped" sectionIndexMinimumDisplayRowCount="-1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="G3H-Cd-rTC">
+                    <rect key="frame" x="20" y="104" width="374" height="758"/>
                     <color key="sectionIndexColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemGray6Color"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S1I-pL-Tvq" secondAttribute="trailing" constant="20" id="77l-3P-5Sg"/>
-                <constraint firstItem="S1I-pL-Tvq" firstAttribute="top" secondItem="wlw-KL-rFq" secondAttribute="bottom" constant="20" id="Bqk-m3-ym4"/>
+                <constraint firstItem="G3H-Cd-rTC" firstAttribute="top" secondItem="wlw-KL-rFq" secondAttribute="bottom" constant="10" id="BQl-v2-iZl"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="G3H-Cd-rTC" secondAttribute="bottom" id="FkN-mf-2xR"/>
                 <constraint firstItem="FBn-s2-98Z" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="GMo-M4-vlH"/>
-                <constraint firstItem="S1I-pL-Tvq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="Hgs-sj-aPL"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="buK-zc-ZMn" secondAttribute="trailing" constant="20" id="Lyc-kB-WXC"/>
-                <constraint firstItem="G3H-Cd-rTC" firstAttribute="top" secondItem="S1I-pL-Tvq" secondAttribute="bottom" constant="14" id="N4k-cR-UCt"/>
                 <constraint firstItem="buK-zc-ZMn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="OPZ-sV-JEt"/>
                 <constraint firstItem="FBn-s2-98Z" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="Wem-KC-pxf"/>
                 <constraint firstItem="G3H-Cd-rTC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="fbN-pc-a6R"/>
@@ -86,9 +76,6 @@
     </objects>
     <resources>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
