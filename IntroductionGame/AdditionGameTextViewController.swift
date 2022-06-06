@@ -13,8 +13,8 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
     let cellIdentifier = "customCell"
     let fileName = "TableViewCell"
 
-    @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var textField: UITextField!
+    @IBOutlet private weak var tableView: UITableView!
 
     override func loadView() {
         view = R.nib.additionGameTextViewController(owner: self)
@@ -29,7 +29,7 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
         self.navigationItem.hidesBackButton = true
     }
 
-    @IBAction func additionButton(_ sender: Any) {
+    @IBAction private func additionButton(_ sender: UIButton) {
         let result = Validator.shared.textCheck(text: textField.text, min: 1, max: 30)
         switch result.isValid {
         case true:
@@ -41,7 +41,7 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
 
     }
 
-    @IBAction func dismissButton(_ sender: Any) {
+    @IBAction private func dismissButton(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 
@@ -57,6 +57,26 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
 
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "質問リスト"
+    }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        switch editingStyle {
+        case .delete:
+            gameLabel.removeLabel(at: indexPath.row)
+            tableView.beginUpdates()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+            tableView.endUpdates()
+        case .insert:
+            break
+        case .none:
+            break
+        @unknown default:
+            fatalError()
+        }
     }
 
 }

@@ -42,17 +42,17 @@ class IntroductionViewController: UIViewController {
         resetGameLabel()
     }
 
-    @IBAction private func dismissButton(_ sender: Any) {
+    @IBAction private func dismissButton(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
 
-    @IBAction private func pressedGameButton(_ sender: Any) {
+    @IBAction private func pressedGameButton(_ sender: UIButton) {
         changeButtonLabel()
         changeGameLabel()
         viewAnimation()
     }
 
-    @IBAction func toAdditionGameTextVCButton(_ sender: Any) {
+    @IBAction private func toAdditionGameTextVCButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: R.segue.introductionViewController.toAdditionGameTextVC, sender: nil)
     }
 

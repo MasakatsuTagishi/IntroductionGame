@@ -61,7 +61,7 @@ class DescriptionViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction private func dismissButton(_ sender: Any) {
+    @IBAction private func dismissButton(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
 
