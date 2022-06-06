@@ -36,6 +36,7 @@ class AdditionGameTextViewController: UIViewController {
         switch result.isValid {
         case true:
             gameLabel.appendLabel(label: textField.text ?? "")
+            textField.text = ""
             tableView.reloadData()
         case false:
             alert.errorAlert(title: "エラー", message: result.errorMessage) { _ in
