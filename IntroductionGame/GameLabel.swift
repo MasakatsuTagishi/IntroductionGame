@@ -11,15 +11,15 @@ class GameLabel {
 
     let startGameLabel: String = "スタートボタンを\n押してください"
 
-    static var gameLabel: [String] = [
+    static var gameLabel: [String?] = [
         "好きな食べ物は何ですか",
         "好きな教科は何ですか",
         "好きなスポーツは何ですか"
     ]
 
     func randomLabel() -> String {
-        let label = GameLabel.gameLabel.randomElement() ?? "スタートボタンを押してください"
-        return label
+        let label = GameLabel.gameLabel.randomElement() ?? "＋ボタンを押して質問を追加してください"
+        return label ?? "＋ボタンを押して質問を追加してください"
     }
 
     func resetLabel() -> String {
@@ -29,6 +29,10 @@ class GameLabel {
 
     func appendLabel(label: String) {
         GameLabel.gameLabel.append(label)
+    }
+
+    func removeLabel(at index: Int) {
+        GameLabel.gameLabel.remove(at: index)
     }
 
 }

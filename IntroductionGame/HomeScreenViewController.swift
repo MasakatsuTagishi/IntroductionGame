@@ -13,11 +13,11 @@ class HomeScreenViewController: UIViewController {
         view = R.nib.homeScreenView(owner: self)
     }
 
-    @IBAction func toIntroductionVCButton(_ sender: Any) {
+    @IBAction private func toIntroductionVCButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: R.segue.homeScreenViewController.toIntroductionVC, sender: nil)
     }
 
-    @IBAction func toDescriptionVCButton(_ sender: Any) {
+    @IBAction private func toDescriptionVCButton(_ sender: UIButton) {
         self.performSegue(withIdentifier: R.segue.homeScreenViewController.toDescriptionVC, sender: nil)
     }
 }
