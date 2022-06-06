@@ -30,8 +30,15 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
     }
 
     @IBAction func additionButton(_ sender: Any) {
-        gameLabel.appendLabel(label: textField.text ?? "")
-        tableView.reloadData()
+        let result = Validator.shared.textCheck(text: textField.text, min: 1, max: 30)
+        switch result.isValid {
+        case true:
+            gameLabel.appendLabel(label: textField.text ?? "")
+            tableView.reloadData()
+        case false:
+            print(result.errorMessage)
+        }
+
     }
 
     @IBAction func dismissButton(_ sender: Any) {
@@ -46,6 +53,10 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! TableViewCell
         cell.label.text = GameLabel.gameLabel[indexPath.row]
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "質問リスト"
     }
 
 }
