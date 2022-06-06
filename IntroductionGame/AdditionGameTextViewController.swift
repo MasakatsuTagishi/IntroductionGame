@@ -10,6 +10,7 @@ import UIKit
 class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     let gameLabel = GameLabel()
+    let alert = Alert()
     let cellIdentifier = "customCell"
     let fileName = "TableViewCell"
 
@@ -24,6 +25,7 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        alert.delegate = self
         tableView.register(UINib(nibName: fileName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         tableView.layer.cornerRadius = 8
         self.navigationItem.hidesBackButton = true
@@ -36,6 +38,9 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
             gameLabel.appendLabel(label: textField.text ?? "")
             tableView.reloadData()
         case false:
+            alert.errorAlert(title: "エラー", message: result.errorMessage) { _ in
+                self.textField.text = ""
+            }
             print(result.errorMessage)
         }
 
@@ -79,4 +84,11 @@ class AdditionGameTextViewController: UIViewController, UITableViewDelegate, UIT
         }
     }
 
+}
+
+// MARK: - AlertDelegate
+extension AdditionGameTextViewController: AlertDelegate {
+    func present(alert: UIAlertController) {
+        present(alert, animated: true, completion: nil)
+    }
 }
